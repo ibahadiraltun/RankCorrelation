@@ -13,14 +13,14 @@ It is implemented with python. Download srank.py to run algorithm.
 ## Usage
 
 ```bash
-$run_results1 = 'path_to_first_run_results'
-$run_results2 = 'path_to_second_run_results'
+run_results1='path_to_first_run_results'
+run_results2='path_to_second_run_results'
 ### note that both run results should be in query-by-query format, not only mean scores.
 ### If you are using trec_eval for scoring metrics, just add additional -q to your command line.
-$alpha = 'it is alpha argument mentioned in the paper'
-$beta = 'it is beta argument mentioned in the paper'
+alpha = 'it is alpha argument mentioned in the paper'
+beta = 'it is beta argument mentioned in the paper'
 ### in any case of non-given alpha and beta, program will consider them as zero.
-srank.py -d1 $run_results1 -d2 $run_results2 -a $alpha -b $beta
+python srank.py -d1 $run_results1 -d2 $run_results2 -a $alpha -b $beta
 ```
 
 ## Contributing
