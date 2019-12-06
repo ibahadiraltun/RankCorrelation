@@ -1,5 +1,5 @@
 """
-    Bahadir Altun - github.com/ibahadiraltun/rank_correlation
+    Bahadir Altun - github.com/ibahadiraltun/RankCorrelation
 
     Rank Correlation using algorithm shared in paper, When Rank Order Isn’t Enough: New Statistical-Significance-Aware Correlation Measures.
 
