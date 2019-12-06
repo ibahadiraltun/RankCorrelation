@@ -1,7 +1,7 @@
 """
-    Bahadir Altun - github.com/ibahadiraltun/rank_correlation
+    Bahadir Altun - github.com/ibahadiraltun/Rank Correlation
 
-    Rank Correlation using algorithm shared in paper, When Rank Order Isn’t Enough: New Statistical-Significance-Aware Correlation Measures.
+    Rank Correlation using algorithm presented in paper, When Rank Order Isn’t Enough: New Statistical-Significance-Aware Correlation Measures.
 
     Please cite the following paper when used the code:
     Kutlu, Mucahid, Tamer Elsayed, Maram Hasanain, and Matthew Lease. "When Rank Order Isn't Enough: New Statistical-Significance-Aware Correlation Measures." In Proceedings of the 27th ACM International Conference on Information and Knowledge Management, pp. 397-406. ACM, 2018.
