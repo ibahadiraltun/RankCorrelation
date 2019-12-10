@@ -20,14 +20,14 @@ It is neccessary to import scipy(1.1.0) package to program.
 ```bash
 pip install scipy
 ```
-To run this code from terminal, there are few variables that needs to be clarified.
--d1: it is path to first run-results folder.
--d2: it is path to second run-results folder.
-Note!: For both -d1 and -d2, referenced folders must contains run-results with query by query format. If you are using trec_eval to evaluate, just simply add -q to your command.
--a: it is alpha argument mentioned in the paper
--b: it is beta argument mentioned in the paper
-Note!: in any case of non-given alpha and beta, program will consider them as zero.
--h: it is true if you want to find correlation using head-weighted version. False, otherwise.
+To run this code from terminal, there are few variables that needs to be clarified.\
+-d1: it is path to first run-results folder.\
+-d2: it is path to second run-results folder.\
+Note!: For both -d1 and -d2, referenced folders must contains run-results with query by query format. If you are using trec_eval to evaluate, just simply add -q to your command.\
+-a: it is alpha argument mentioned in the paper.\
+-b: it is beta argument mentioned in the paper.\
+Note!: in any case of non-given alpha and beta, program will consider them as zero.\
+-h: it is true if you want to find correlation using head-weighted version. False, otherwise.\
 
 ```bash
 python srank.py -d1 path_to_first_run_results -d2 path_to_second_run_results -a alpha -b beta -h flag
