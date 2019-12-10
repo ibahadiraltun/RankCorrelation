@@ -8,19 +8,29 @@ Kutlu, Mucahid, Tamer Elsayed, Maram Hasanain, and Matthew Lease. "When Rank Ord
 
 ## Installation
 
-It is implemented with python. Download srank.py to run algorithm.
+It is implemented with python 3.6. Clone this repository to use.
+
+```bash
+git clone https://github.com/ibahadiraltun/RankCorrelation
+```
 
 ## Usage
 
+It is neccessary to import scipy(1.1.0) package to program.
 ```bash
-run_results1='path_to_first_run_results'
-run_results2='path_to_second_run_results'
-### note that both run results should be in query-by-query format, not only mean scores.
-### If you are using trec_eval for scoring metrics, just add additional -q to your command line.
-alpha='it is alpha argument mentioned in the paper'
-beta='it is beta argument mentioned in the paper'
-### in any case of non-given alpha and beta, program will consider them as zero.
-python srank.py -d1 $run_results1 -d2 $run_results2 -a $alpha -b $beta
+pip install scipy
+```
+To run this code from terminal, there are few variables that needs to be clarified.
+-d1: it is path to first run-results folder.
+-d2: it is path to second run-results folder.
+Note!: For both -d1 and -d2, referenced folders must contains run-results with query by query format. If you are using trec_eval to evaluate, just simply add -q to your command.
+-a: it is alpha argument mentioned in the paper
+-b: it is beta argument mentioned in the paper
+Note!: in any case of non-given alpha and beta, program will consider them as zero.
+-h: it is true if you want to find correlation using head-weighted version. False, otherwise.
+
+```bash
+python srank.py -d1 path_to_first_run_results -d2 path_to_second_run_results -a alpha -b beta -h flag
 ```
 
 ## Contributing

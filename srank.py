@@ -55,13 +55,13 @@ def get_run_results(dir_path):
                 for line in lines:
                     line.replace('\n', '')
                     if 'all' in line:
-                        tmp_results_mean[fname] = float(line.split('\t')[2])
+                        # tmp_results_mean[fname] = float(line.split('\t')[2])
                         continue
                     # query_id = line.split('\t')[1]
                     # query_id is not necessary to keep scores because scores will be sorted by query ids. run_results_a[run_id][i] is refers to same query as run_results_b[run_id][i]
                     score = float(line.split('\t')[2])
                     tmp_results[run_id].append(score)
-    
+            tmp_results_mean[fname] = sum(tmp_results[run_id]) / len(tmp_results[run_id])
     return tmp_results, tmp_results_mean
 
 def run_naive_tau():
@@ -433,6 +433,7 @@ def run_naive_srank_weighted():
 if __name__ == '__main__':
 
     args_length = len(sys.argv)
+    is_headweighted = 0
 
     for i in range(0, args_length):
         if sys.argv[i] == '-d1':
@@ -447,9 +448,15 @@ if __name__ == '__main__':
         if sys.argv[i] == '-b':
             beta = float(sys.argv[i + 1])
             i = i + 1
-
+        if sys.argv[i] == '-h':
+            is_headweighted = int(sys.argv[i + 1])
+            i = i + 1
 
     run_naive_tau()
-    run_naive_srank_unweighted()
-    run_naive_srank_weighted()
+    # run_naive_srank_unweighted()
+    # run_naive_srank_weighted()
+
+    if is_headweighted == 1: run_naive_srank_weighted()
+    else: run_naive_srank_unweighted()
+
 
